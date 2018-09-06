@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<script>
+		function Soma(){
+				var v1 = parseInt(document.getElementById("inNum1").value);
+				var v2 = parseInt(document.getElementById("inNum2").value);
+				document.getElementById("txRes").value =(v1 + v2);
+		}
+		function Sub(){
+			var v1 = parseInt(document.getElementById("inNum1").value);
+			var v2 = parseInt(document.getElementById("inNum1").value);
+			document.getElementById("txRes").value =(v1 - v2);
+		}
+		function Div(){
+			var v1 = parseInt(document.getElementById("inNum1").value);
+			var v2 = parseInt(document.getElementById("inNum2").value);
+			document.getElementById("txRes").value = (v1 / v2);
+		}
+		function Mult(){
+			var v1 = parseInt(document.getElementById("inNum1").value);
+			var v2 = parseInt(document.getElementById("inNum2").value);
+			document.getElementById("txRes").value = (v1 * v2);
+		}
+	</script>
+
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="Style.css">
 	<title>Calculadora</title>
@@ -18,16 +42,16 @@
 						<div id="dvCalc" align="left">
 							<center><input id="txRes" type="text" readonly="true" name="Resultado" placeholder="RESULTADO">
 								<br>
-							<input class="txNum" type="text" name="num1" placeholder="Número 1">
-							<input class="txNum" type="text" name="num2" placeholder="Número 2">
+							<input class="txNum" id="inNum1" type="text" name="num1" placeholder="Número 1">
+							<input class="txNum" id="inNum2" type="text" name="num2" placeholder="Número 2">
 							<br>
 							</center>
 						</div>					
 						<div id="dvBotoes" align="right">
-							<button class="bt">X</button>
-							<button class="bt">-</button><br>
-							<button class="bt">/</button>
-							<button class="bt">*</button><br>
+							<button class="bt" onclick="Soma()">X</button>
+							<button class="bt" onclick="Sub()">-</button><br>
+							<button class="bt" onclick="Div()">/</button>
+							<button class="bt" onclick="Mult()">*</button><br>
 						</div>			
 				</div>		
 		</div>
